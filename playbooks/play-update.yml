@@ -1,0 +1,18 @@
+- name: Update Linux Hosts
+  hosts: all
+  roles:
+  - role: update
+    update_reboot: false
+
+  post_tasks:
+  - when: ansible_os_family == 'Debian'
+    block:
+    - name: Check if reboot is required (Debian)
+      ansible.builtin.stat:
+        path: /var/run/reboot-required
+      register: system_reboot_required
+
+    - name: Reboot System (if required)
+      ansible.builtin.reboot:
+        reboot_timeout: 600
+      when: system_reboot_required.stat.exists

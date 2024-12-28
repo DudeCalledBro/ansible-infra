@@ -1,0 +1,8 @@
+users:
+- name: example1
+  state: present
+  sudo_config: "ALL=(ALL) NOPASSWD: ALL"
+
+- name: example2
+  state: present
+  sudo_config: "ALL=(ALL) NOPASSWD: ALL"

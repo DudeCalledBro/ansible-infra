@@ -1,0 +1,12 @@
+- name: Reboot Servers
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Rebooting system
+    ansible.builtin.reboot:
+      msg: "Server is being rebooted by Ansible"
+      reboot_timeout: 600
+
+- name: Verify the server is up
+  ansible.builtin.import_playbook: play-ping.yml

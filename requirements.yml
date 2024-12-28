@@ -1,0 +1,17 @@
+collections: []
+
+roles:
+- name: update
+  src: https://github.com/DudeCalledBro/ansible-role-update.git
+
+- name: users
+  src: https://github.com/DudeCalledBro/ansible-role-users.git
+
+- name: hostname
+  src: https://github.com/DudeCalledBro/ansible-role-hostname.git
+
+- name: locale
+  src: https://github.com/DudeCalledBro/ansible-role-locale.git
+
+- name: docker
+  src: https://github.com/DudeCalledBro/ansible-role-docker.git

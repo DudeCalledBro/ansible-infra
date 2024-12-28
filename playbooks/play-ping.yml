@@ -1,0 +1,11 @@
+- name: Ping Playbook
+  hosts: all
+  gather_facts: false
+
+  tasks:
+  - name: Ping hosts via ansible
+    ansible.builtin.ping:
+
+  - name: Print success message
+    ansible.builtin.debug:
+      msg: "Successfully pinged {{ inventory_hostname }}"

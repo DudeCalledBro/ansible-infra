@@ -1,0 +1,4 @@
+- name: Setup Locale on Linux Systems
+  hosts: all
+  roles:
+  - role: locale

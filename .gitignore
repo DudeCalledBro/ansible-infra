@@ -1,0 +1,25 @@
+# ignore ansible collections
+collections/*
+!collections/.gitkeep
+
+# ignore ansible inventories
+inventories/*.yml
+inventories/*.ini
+!inventories/example*
+
+# ignore ansible group_vars
+inventories/group_vars/*
+inventories/group_vars/*/*
+!inventories/group_vars/example.*
+!inventories/group_vars/*/example*
+
+# ignore ansible roles
+roles/*
+!roles/.gitkeep
+
+# ignore common
+.DS_Store
+*.retry
+*/__pycache__
+*.pyc
+.cache

@@ -1,0 +1,4 @@
+- name: Setup Machine Hostname
+  hosts: all
+  roles:
+  - role: hostname

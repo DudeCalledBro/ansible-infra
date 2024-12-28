@@ -1,0 +1,8 @@
+- name: Hostname (init)
+  ansible.builtin.import_playbook: play-hostname.yml
+
+- name: Locale (init)
+  ansible.builtin.import_playbook: play-locale.yml
+
+- name: Users (init)
+  ansible.builtin.import_playbook: play-users.yml

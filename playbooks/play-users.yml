@@ -1,0 +1,4 @@
+- name: Setup Users
+  hosts: all
+  roles:
+  - role: users
