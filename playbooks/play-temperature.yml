@@ -1,0 +1,11 @@
+- name: Check Raspberry Pi Temperature
+  hosts: all
+  tasks:
+  - name: Measure Temperature
+    ansible.builtin.command: "vcgencmd measure_temp"
+    register: pi_temperature
+    changed_when: false
+
+  - name: Show Temperature
+    ansible.builtin.debug:
+      msg: "{{ pi_temperature.stdout }}"
