@@ -1,5 +1,3 @@
-collections: []
-
 roles:
 - name: update
   src: https://github.com/DudeCalledBro/ansible-role-update.git

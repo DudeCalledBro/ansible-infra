@@ -1,6 +1,7 @@
 # ignore ansible collections
 collections/*
 !collections/.gitkeep
+!collections/requirements.yml
 
 # ignore ansible inventories
 inventories/*.yml
@@ -16,6 +17,7 @@ inventories/group_vars/*/*
 # ignore ansible roles
 roles/*
 !roles/.gitkeep
+!roles/requirements.yml
 
 # ignore common
 .DS_Store
